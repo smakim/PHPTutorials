@@ -27,7 +27,7 @@
     var_dump(is_int($d)); // false
 
     $e = 232_123_12;
-    var_dump($e); // string
+    var_dump($e); // integer
 
 
 

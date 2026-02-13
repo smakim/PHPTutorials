@@ -51,7 +51,13 @@
     if (is_infinite($f)) {
         echo "f is Infinite (INF)<br>";
     }
-    
+
+    $g = 5;
+    var_dump((float)$g); // casts integer to float
+
+    $h = "12.54abcd";
+    var_dump((float)$h); // casts string to float, results in 12.
+
 
 
 ?>
