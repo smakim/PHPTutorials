@@ -64,10 +64,19 @@
     $x = (int)'123';
     echo "Value of x: " . $x . "<br>";
     var_dump($x);
-
-
-
     ?>
+    
+    <!-- alternative html syntax with php -->
+    <?php $score = 50; ?>
+    <?php if ($score >= 90): ?>
+        <p>Awesome! You scored above 90.</p>
+    <?php elseif ($score >= 80): ?>
+        <p>Good job! You scored above 80.</p>
+    <?php elseif ($score >= 70): ?>
+        <p>Not bad! You scored above 70.</p>
+    <?php else: ?>
+        <p>Keep trying! You scored below 70.</p>
+    <?php endif; ?>
 
 </body>
 </html>
