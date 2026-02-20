@@ -39,7 +39,7 @@ $result = bar(...$array); // This will unpack the array and pass 'x' as $x and '
 echo "Result: " . $result . "<br>";
 
 // Anonymous function
-echo "<br>Anonymous Function<br>";
+echo "<h2>Anonymous Functions</h2>";
 $greet = function(string $name): string {
     return "Hello, $name!";
 };
@@ -63,19 +63,49 @@ echo "Sum: " . $sum2(10, 20, 30) . "<br>"; // This will calculate the sum of the
 echo "Outside function, x: $x<br>"; // This will print 15, showing that the $x inside the function has
 
 // Callable functions
-echo "<br>Callable Functions<br>";
+echo "<h2>Callable Functions</h2>";
 $array = [1, 2, 3, 4, 5];
-$array2 =array_map(function(int $n): int {
+$array2 = array_map(function(int $n): int {
     return $n * 2;
 }, $array); // This will return a new array with each element multiplied by 2
+$x = function(int $n): int {
+    return $n * 3;
+};
+$array3 = array_map($x, $array); // This will return a new array with each element multiplied by 3 using the callable function $x
 
+function multiply(int $n): int {
+    return $n * 4;
+}
+$array4 = array_map('multiply', $array); // This will return a new array with each element multiplied by 4 using the callable function 'multiply'
 echo '<pre>';
 print_r($array);
 print_r($array2);
+print_r($array3);
 echo '</pre>';
 
+function foo2($element): int {
+    return $element * 5;
+}
+$sum2 = function (callable $callback, int|float ...$numbers): int|float {
+    return $callback(array_sum($numbers));
+};
+echo $sum2('foo2', 10, 20, 30) . "<br>"; // This will calculate the sum of the numbers and then pass it to the callable function 'foo2' which multiplies it by 5, resulting in (10 + 20 + 30) * 5 = 300 
+
+echo $sum2(function(int $n): int {
+    return $n * 10;
+}, 10, 20, 30) . "<br>"; // This will calculate the sum of the numbers and then pass it to the anonymous function which multiplies it by 10, resulting in (10 + 20 + 30) * 10 = 600
+
+// Arrow functions
+echo "<h2>Arrow Functions</h2>";
+$numbers = [1, 2, 3, 4, 5];
+$squared = array_map(fn($n) => $n * $n, $numbers); // This will return a new array with each element squared using an arrow function
+echo '<pre>';
+print_r($squared);
+echo '</pre>';
+
+
 // function variables
-echo "<br>Function Variables<br>";
+echo "<h2>Function Variables</h2>";
 function add(int $a, int $b): int {
     return $a + $b;
 }
