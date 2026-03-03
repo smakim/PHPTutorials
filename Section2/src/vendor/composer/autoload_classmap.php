@@ -16,6 +16,8 @@ return array(
     'App\\Inheritance\\Toaster' => $baseDir . '/app/Inheritance/Toaster.php',
     'App\\Inheritance\\ToasterPro' => $baseDir . '/app/Inheritance/ToasterPro.php',
     'App\\Inheritance\\ToasterPro2' => $baseDir . '/app/Inheritance/ToasterPro2.php',
+    'App\\Interfaces\\CollectionAgency' => $baseDir . '/app/Interfaces/CollectionAgency.php',
+    'App\\Interfaces\\DebtCollector' => $baseDir . '/app/Interfaces/DebtCollector.php',
     'App\\PaymentGateway\\Paddle\\Transaction' => $baseDir . '/app/PaymentGateway/Paddle/Transaction.php',
     'App\\PaymentGateway\\Paddle\\Transaction2' => $baseDir . '/app/PaymentGateway/Paddle/Transaction2.php',
     'App\\PaymentGateway\\Paddle\\Transaction3' => $baseDir . '/app/PaymentGateway/Paddle/Transaction3.php',

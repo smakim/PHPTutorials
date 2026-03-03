@@ -56,6 +56,8 @@ class ComposerStaticInit7422faf8f33d1f1cdfca8767e0ffc0f4
         'App\\Inheritance\\Toaster' => __DIR__ . '/../..' . '/app/Inheritance/Toaster.php',
         'App\\Inheritance\\ToasterPro' => __DIR__ . '/../..' . '/app/Inheritance/ToasterPro.php',
         'App\\Inheritance\\ToasterPro2' => __DIR__ . '/../..' . '/app/Inheritance/ToasterPro2.php',
+        'App\\Interfaces\\CollectionAgency' => __DIR__ . '/../..' . '/app/Interfaces/CollectionAgency.php',
+        'App\\Interfaces\\DebtCollector' => __DIR__ . '/../..' . '/app/Interfaces/DebtCollector.php',
         'App\\PaymentGateway\\Paddle\\Transaction' => __DIR__ . '/../..' . '/app/PaymentGateway/Paddle/Transaction.php',
         'App\\PaymentGateway\\Paddle\\Transaction2' => __DIR__ . '/../..' . '/app/PaymentGateway/Paddle/Transaction2.php',
         'App\\PaymentGateway\\Paddle\\Transaction3' => __DIR__ . '/../..' . '/app/PaymentGateway/Paddle/Transaction3.php',
