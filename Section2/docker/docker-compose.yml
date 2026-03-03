@@ -1,0 +1,19 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php_tutorial_app
+    restart: always
+    working_dir: /var/www
+    volumes:
+      - ../src:/var/www
+  nginx:
+    image: nginx:latest
+    container_name: php_tutorial_nginx
+    restart: always
+    ports:
+      - "8000:80"
+    volumes:
+      - ../src:/var/www
+      - ./nginx:/etc/nginx/conf.d
