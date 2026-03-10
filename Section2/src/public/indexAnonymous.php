@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use App\Anonymous\MyClass;
 use App\Anonymous\MyInterface;
@@ -27,7 +27,7 @@ $obj = new class(1, 2, 3) extends MyClass implements MyInterface {
         echo 'myMethodInterface defined in the anonymous class called<br />';
     }
 };
-echo var_dump($obj) . '<br />';
+var_dump($obj); echo  '<br />';
 echo 'anonymous class: ' . var_dump(get_class($obj)) . '<br />';
 $obj->myMethodClass(); // will print "myMethodClass() called"
 $obj->myMethodTrait(); // will print "myMethodTrait() called"
@@ -36,15 +36,15 @@ $obj->myMethodInterface(); // will print "myMethodInterface defined in the anony
 // Anonymous Class can be passed as an argument to a function that expects an interface using typehint
 function myFunction(MyInterface $obj)
 {
-    echo var_dump($obj) . '<br />'; // will print the anonymous class
+    var_dump($obj); echo '<br />'; // will print the anonymous class
 }
 myFunction($obj); // passing the anonymous class as an argument
 
 $obj2 = new ClassA(1, 2);
-echo var_dump($obj2->methodB()) . '<br />';
+var_dump($obj2->methodB());echo '<br />';
 
 $obj3 = new ClassA(3, 4);
-echo var_dump($obj3->methodC()) . '<br />';
+var_dump($obj3->methodC()); echo '<br />';
 
 
 echo "<h2>Anonymous Functions</h2>";
@@ -63,4 +63,4 @@ $anonymousClass = new class {
         $anonymousFunction();
     }
 };
-echo var_dump($anonymousClass) . '<br />';
+var_dump($anonymousClass); echo '<br />';
