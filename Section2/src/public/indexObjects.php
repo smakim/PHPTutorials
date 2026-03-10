@@ -2,6 +2,10 @@
 
 require_once '../Transaction1.php';
 
+echo "<h1>Objects</h1>";
+echo "More documentation at: <a href='https://www.php.net/manual/en/language.oop5.objects.php'>Objects Reference</a> <br>";
+echo "Tutorial video: <a href='https://youtu.be/6FW72q5fIx8?si=LErPoSNH_IrAgAKe'>https://youtu.be/6FW72q5fIx8?si=LErPoSNH_IrAgAKe</a> <br>";
+
 $transaction1 = (new Transaction1(100, 'Transaction 1'))
     ->addTax(8)
     ->applyDiscount(10);

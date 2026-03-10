@@ -2,11 +2,12 @@
 
 // declare(strict_types=1);
 
-require __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 
 echo "<h1>Magic Methods</h1>";
 echo "More documentation at: <a href='https://www.php.net/manual/en/language.oop5.magic.php'>Magic Method Reference</a> <br>";
+echo "Tutorial video: <a href='https://youtu.be/nCxnzj83poQ?si=Hh0GK3zFNatRqr6n'>https://youtu.be/nCxnzj83poQ?si=Hh0GK3zFNatRqr6n</a> <br>";
 
 echo "<h2>__get() and __set()</h2>";
 $invoice = new App\MagicMethods\Invoice();

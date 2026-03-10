@@ -1,10 +1,12 @@
 <?php
 declare(strict_types=1);
 
-require __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 
-echo "<h4>Static Binding</h4>";
+echo "<h1>Late Static Binding</h1>";
+echo "More documentation at: <a href='https://www.php.net/manual/en/language.oop5.late-static-bindings.php'>Late Static Binding Reference</a> <br>";
+echo "Tutorial video: <a href='https://youtu.be/4W5t8g3Rp_0?si=ZxIpXMDFgBJ5bG_t'>https://youtu.be/4W5t8g3Rp_0?si=ZxIpXMDFgBJ5bG_t</a> <br>";
 
 $classA = new App\StaticBinding\ClassA();
 $classB = new App\StaticBinding\ClassB();

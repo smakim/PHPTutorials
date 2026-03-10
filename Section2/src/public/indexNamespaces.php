@@ -1,7 +1,11 @@
 <?php
 declare(strict_types=1);
 
-require __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+
+echo "<h1>Namespaces</h1>";
+echo "More documentation at: <a href='https://www.php.net/manual/en/language.namespaces.php'>Namespaces Reference</a> <br>";
+echo "Tutorial video: <a href='https://youtu.be/Jni9c0-NjrY?si=Dx35bhW_SizumE9M'>https://youtu.be/Jni9c0-NjrY?si=Dx35bhW_SizumE9M</a> <br>";
 
 use App\Enums\Status;
 use App\namespace1\ExampleNamespace;
