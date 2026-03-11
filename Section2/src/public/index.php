@@ -41,6 +41,12 @@ echo '</tr>';
 echo '<tr>';
 echo '<td><a href="indexSerialization.php">Serialization</a></td>';
 echo '</tr>';
+echo '<tr>';
+echo '<td><a href="indexErrorHandling.php">Error Handling 1</a></td>';
+echo '</tr>';
+echo '<tr>';
+echo '<td><a href="indexErrorHandling2.php">Error Handling 2</a></td>';
+echo '</tr>';
 echo '</table>';
 
 
